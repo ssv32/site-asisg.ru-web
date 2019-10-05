@@ -1,0 +1,11 @@
+htdocs/bitrix/
+htdocs/upload/
+/nbproject/private/
+nbproject/
+htdocs/.htaccess
+htdocs/css
+htdocs/eng
+htdocs/html
+htdocs/js
+htdocs/vendor
+htdocs/web.config
