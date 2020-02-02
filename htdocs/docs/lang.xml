@@ -315,9 +315,9 @@
 	<items>
 		<item>
 			<id>1</id>
-			<uf_name>rus</uf_name>
+			<uf_name>ru</uf_name>
 			<uf_sort>100</uf_sort>
-			<uf_xml_id>rus</uf_xml_id>
+			<uf_xml_id>ru</uf_xml_id>
 			<uf_link />
 			<uf_description />
 			<uf_full_description />
@@ -326,9 +326,9 @@
 		</item>
 		<item>
 			<id>2</id>
-			<uf_name>eng</uf_name>
+			<uf_name>en</uf_name>
 			<uf_sort>100</uf_sort>
-			<uf_xml_id>eng</uf_xml_id>
+			<uf_xml_id>en</uf_xml_id>
 			<uf_link />
 			<uf_description />
 			<uf_full_description />
