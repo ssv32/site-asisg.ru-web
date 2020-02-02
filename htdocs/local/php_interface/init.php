@@ -2,7 +2,7 @@
 use \Bitrix\Main\Application;
 use \Bitrix\Main\Loader;
 
-//автоподключение классов
+// автоподключение классов (auto connect classes)
 Loader::registerAutoLoadClasses(null,
     array(
         'Helpers' => '/local/class/Helpers.php',
@@ -10,8 +10,8 @@ Loader::registerAutoLoadClasses(null,
     )
 );
 
-// инициализация объекста класса Site 
+// инициализация объекста класса Site (initialization of an object of class Site)
 Site::setIdBlock( 
-    Helpers::getIdIBlockByCodeIBlock( Site::$iblockCodeOptionsBlockSite ) // определит id инфоблока
+    Helpers::getIdIBlockByCodeIBlock( Site::$iblockCodeOptionsBlockSite ) // определит id инфоблока (will determine the info block id)
 );
 $site = Site::getInstance();

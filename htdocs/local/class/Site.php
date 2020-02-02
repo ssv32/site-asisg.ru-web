@@ -1,25 +1,32 @@
 <?
 if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 /**
- * class Site - тут будут настройки сайта (настройки блоков сайта и прочее)
+ * class Site 
+ * - тут будут настройки сайта (настройки блоков сайта и прочее)
+ *  (there will be site settings (site block settings, etc.))
+ * 
  * (будет реализоват синглтон)
+ * (will realize singleton)
  */
 class Site{
     
-    // id инфоблока с настройками блоков сайта
+    // id инфоблока с настройками блоков сайта (info block id with site block settings)
     private static $iblockIdOptionsBlockSite;
     
-    // code инфоблока с настройками блоков сайта
+    // code инфоблока с настройками блоков сайта (information block code with site block settings)
     public static $iblockCodeOptionsBlockSite = 'options';
     
-    // объект класса Site
+    // объект класса Site (Site object)
     private static $thisObject;
     
-    // данные из инфоблока с настройками блоков сайта
+    // данные из инфоблока с настройками блоков сайта (data from the infoblock with site block settings)
     public $dataSiteBlocksOptions;
     
     /**
-     * getInstance() - получить объект текущего класса
+     * getInstance() 
+     * - получить объект текущего класса
+     *  (get the object of the current class)
+     * 
      * @return object class Site
      */
     public function getInstance(){
@@ -38,8 +45,11 @@ class Site{
     }
     
     /**
-     * setIdBlock() - установить id инфоблока с настройками блоков сайта
-     * @param int $iblockIdOptionsBlockSite - id инфоблока
+     * setIdBlock() 
+     *  - установить id инфоблока с настройками блоков сайта
+     *  (set the id of the infoblock with the settings of the site blocks)
+     * 
+     * @param int $iblockIdOptionsBlockSite - id инфоблока (id infoblock)
      */
     public static function setIdBlock($iblockIdOptionsBlockSite){
         if(self::$thisObject === null){
@@ -48,7 +58,10 @@ class Site{
     }
     
     /**
-     * getOptionsBlocksSite() - получить настройки блоков сайта 
+     * getOptionsBlocksSite() 
+     * - получить настройки блоков сайта 
+     * (get site block settings)
+     * 
      * @return type
      */
     private function getOptionsBlocksSite(){
