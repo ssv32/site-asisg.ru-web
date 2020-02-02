@@ -1,5 +1,6 @@
 <?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
+
 if(!empty($arResult['ITEMS'])){?>
     <div id="work">
         <div class="container content-lg">
@@ -18,13 +19,13 @@ if(!empty($arResult['ITEMS'])){?>
                                 <!-- Work -->
                                 <div class="work work-popup-trigger">
                                     <div class="work-overlay">
-                                        <img class="full-width img-responsive" src="<?=$val['IMAGE']?>" alt="<?=$val['TITLE']?>">
+                                        <img class="full-width img-responsive" src="<?=$val['PREVIEW_PICTURE']['SRC']?>" alt="<?=$val['NAME']?>">
                                     </div>
                                     <div class="work-popup-overlay">
                                         <div class="work-popup-content">
                                             <a href="javascript:void(0);" class="work-popup-close">X</a>
                                             <div class="margin-b-30">
-                                                <h3 class="margin-b-5"><?=$val['TITLE']?></h3> 
+                                                <h3 class="margin-b-5"><?=$val['NAME']?></h3> 
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-8 work-popup-content-divider sm-margin-b-20">
@@ -34,33 +35,38 @@ if(!empty($arResult['ITEMS'])){?>
                                                 </div>
                                                 <div class="col-sm-4">
                                                     <div class="margin-t-10 sm-margin-t-0">
-                                                        <p class="margin-b-5"><strong><?=GetMessage("addres");?>:</strong> <a href="//<?=$val['URL']?>"><?=$val['URL']?></a></p>
+                                                        <p class="margin-b-5">
+                                                            <strong><?=GetMessage("addres");?>:</strong> 
+                                                            <a href="//<?=$val['PROPERTIES']['URL_SITE']['VALUE']?>">
+                                                                <?=$val['PROPERTIES']['URL_SITE']['VALUE']?>
+                                                            </a>
+                                                        </p>
                                                     </div>
-                                                    <?if(!empty($val['URL_GITHUB'])){?>
+                                                    <?if(!empty($val['PROPERTIES']['URL_GITHUB']['VALUE'])){?>
                                                         <div class="margin-t-10 sm-margin-t-0">
                                                             <p class="margin-b-5">
                                                                 <strong><?=GetMessage("programmnyy_code");?>:</strong> 
-                                                                <a target="_blank" href="//<?=$val['URL_GITHUB']?>">GitHub.com</a>
+                                                                <a target="_blank" href="//<?=$val['PROPERTIES']['URL_GITHUB']['VALUE']?>">GitHub.com</a>
                                                             </p>
                                                         </div>
                                                     <?}?>
-                                                    <?if(!empty($val['CMS'])){?>
+                                                    <?if(!empty($val['PROPERTIES']['CMS']['VALUE'])){?>
                                                         <div class="margin-t-10 sm-margin-t-0">
                                                             <p class="margin-b-5">
                                                                 <strong>CMS/Framework</strong> 
-                                                                <?=$val['CMS'];?>
+                                                                <?=$val['PROPERTIES']['CMS']['VALUE'];?>
                                                             </p>
                                                         </div>
                                                     <?}?>
-                                                    <?if(!empty($val['CUSTOM_TEXT_HTML'])){?>
+                                                    <?if(!empty($val['PROPERTIES']['CUSTOM_TEXT_HTML']['VALUE'])){?>
                                                         <div class="margin-t-10 sm-margin-t-0">
                                                             <p class="margin-b-5">
-                                                                <?=$val['CUSTOM_TEXT_HTML']['TEXT'];?>
+                                                                <?=$val['PROPERTIES']['CUSTOM_TEXT_HTML']['~VALUE']['TEXT'];?>
                                                             </p>
                                                         </div>
                                                     <?}?>
                                                     <div class="margin-t-10 sm-margin-t-0">
-                                                        <p class="margin-b-5"><a target="_blank" href="<?=$val['IMAGE2']?>"><?=GetMessage("screenshot");?></a></p>
+                                                        <p class="margin-b-5"><a target="_blank" href="<?=$val['DETAIL_PICTURE']['SRC']?>"><?=GetMessage("screenshot");?></a></p>
                                                     </div>
                                                 </div>
                                             </div>

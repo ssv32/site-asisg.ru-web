@@ -17,26 +17,26 @@ if(!empty($arResult['ITEMS'])){?>
                         <div class="row">
                             <?if(!empty($arResult['ITEMS'][0])){?>
                                 <div class="col-md-3 col-xs-6 md-margin-b-30">
-                                    <h5><?=$arResult['ITEMS'][0]['TITLE']?></h5>
-                                    <?=$arResult['ITEMS'][0]['TEXT']?>
+                                    <h5><?=$arResult['ITEMS'][0]['NAME']?></h5>
+                                    <?=$arResult['ITEMS'][0]['PROPERTIES']['VAL']['VALUE']?>
                                 </div>
                             <?}?>
                             <?if(!empty($arResult['ITEMS'][1])){?>
                                 <div class="col-md-3 col-xs-6 md-margin-b-30">
-                                    <h5><?=$arResult['ITEMS'][1]['TITLE']?></h5>
-                                    <?=$arResult['ITEMS'][1]['TEXT']?>
+                                    <h5><?=$arResult['ITEMS'][1]['NAME']?></h5>
+                                    <?=$arResult['ITEMS'][1]['PROPERTIES']['VAL']['VALUE']?>
                                 </div>
                             <?}?>
                             <?if(!empty($arResult['ITEMS'][2])){?>
                                 <div class="col-md-3 col-xs-6">
-                                    <h5><?=$arResult['ITEMS'][2]['TITLE']?></h5>
-                                    <?=$arResult['ITEMS'][2]['TEXT']?>
+                                    <h5><?=$arResult['ITEMS'][2]['NAME']?></h5>
+                                    <?=$arResult['ITEMS'][2]['PROPERTIES']['VAL']['VALUE']?>
                                 </div>
                             <?}?>
                             <?if(!empty($arResult['ITEMS'][3])){?>
                                 <div class="col-md-3 col-xs-6">
-                                    <h5><?=$arResult['ITEMS'][3]['TITLE']?></h5>
-                                    <?=$arResult['ITEMS'][3]['TEXT']?>
+                                    <h5><?=$arResult['ITEMS'][3]['NAME']?></h5>
+                                    <?=$arResult['ITEMS'][3]['PROPERTIES']['VAL']['VALUE']?>
                                 </div>
                             <?}?>
                         </div>

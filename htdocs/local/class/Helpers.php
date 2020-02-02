@@ -47,32 +47,31 @@ class Helpers{
     }
 
     // язык по умолчанию
-    public static $lang = 'rus'; 
+    public static $lang = 'ru'; 
    
     // список всех поддерживаемых языков (можно сделать что бы брался из админки потом)
     // и соответствие стандартному коду языка с кодом используемым по этому сайту
     public static $arLangs = array( 
-        'ru' => 'rus',
-        'en' => 'eng'
+        'ru' => 'ru',
+        'en' => 'en'
     );
 
    /**
     * getLang() - получить текущий язык сайта
     * @return string (rus/eng)
     */
-    function getLang(){
-        $gLang = LANGUAGE_ID;
-        $lang = self::$lang;
-        if(!empty(self::$arLangs[$gLang])){
-            $lang = self::$arLangs[$gLang];      
-        }
-        return $lang;
+    public static function getLang(){
+        return LANGUAGE_ID;
+    }
+    
+    public static function getLangUrlByUrl($url){
+        return ((self::getLang() != 'ru')? '/'.self::getLang() :'').$url;
     }
     
     // title для страниц с разным языком
     public static $titleTextPage = array(
-        'rus' => 'asisg.ru/web - Разработка и продвижение сайтов',
-        'eng' => 'asisg.ru/web - Website development and promotion'
+        'ru' => 'asisg.ru - Разработка и поддержка сайтов',
+        'en' => 'asisg.ru - Website development and support'
     ); 
 
 }
