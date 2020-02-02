@@ -3,13 +3,13 @@ if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
 
 $arResult = array();
 
-// получить пункты меню
+// получить пункты меню (get menu items)
 if (!empty($arParams['LANG']) ){    
     $site = Site::getInstance();
     $arResult['ITEMS'] = $site->dataSiteBlocksOptions[$arParams['LANG']];
 }
 
-// получить языки
+// получить языки (get languages)
 if (!empty(Helpers::$arLangs)){
     foreach (Helpers::$arLangs as $value) {
         $arResult['LANG'][$value] = array(
